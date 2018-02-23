@@ -17,7 +17,7 @@ public enum NetworkSourceType {
 
     public static NetworkSourceType fromValue(String text) {
         for (NetworkSourceType nst : NetworkSourceType.values()) {
-            if (String.valueOf(nst.value).equals(text)) {
+            if (String.valueOf(nst.value).equalsIgnoreCase(text)) {
                 return nst;
             }
         }

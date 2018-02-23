@@ -1,0 +1,162 @@
+{
+	"info": {
+		"name": "QLess",
+		"_postman_id": "1bcf0f7c-95e6-bff1-b7cf-d5909df418e2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/merchant/location/606A3D78F0341ADB789E60664A3EC5245525B073",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"merchant",
+						"location",
+						"606A3D78F0341ADB789E60664A3EC5245525B073"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetByIDNoMobileAccess-404",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/merchant/location/606A3D78F0341ADB789E60664A3EC5245525B073?mobileClientAccess=false",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"merchant",
+						"location",
+						"606A3D78F0341ADB789E60664A3EC5245525B073"
+					],
+					"query": [
+						{
+							"key": "mobileClientAccess",
+							"value": "false",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetByIDMobileAccess",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/merchant/location/606A3D78F0341ADB789E60664A3EC5245525B073?mobileClientAccess=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"merchant",
+						"location",
+						"606A3D78F0341ADB789E60664A3EC5245525B073"
+					],
+					"query": [
+						{
+							"key": "mobileClientAccess",
+							"value": "true",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetByIDOmitFields",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/merchant/location/606A3D78F0341ADB789E60664A3EC5245525B073?omitConsumerFeatures=true&omitMerchantInfo=true&omitContactInfo=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"merchant",
+						"location",
+						"606A3D78F0341ADB789E60664A3EC5245525B073"
+					],
+					"query": [
+						{
+							"key": "omitConsumerFeatures",
+							"value": "true",
+							"equals": true
+						},
+						{
+							"key": "omitMerchantInfo",
+							"value": "true",
+							"equals": true
+						},
+						{
+							"key": "omitContactInfo",
+							"value": "true",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/merchant/location?searchText=ola",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"merchant",
+						"location"
+					],
+					"query": [
+						{
+							"key": "searchText",
+							"value": "ola",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -5,13 +5,13 @@ package com.nicomartinezdev.qless.merchantlocator.model;
  */
 public class NetworkSource {
 
-    private NetworkSourceType type;
+    private String type;
     private String globalId;
     private String hostName;
     private String hostId;
     private String indirectId;
 
-    public NetworkSource(NetworkSourceType type, String globalId, String hostName, String hostId, String indirectId) {
+    public NetworkSource(String type, String globalId, String hostName, String hostId, String indirectId) {
         this.type = type;
         this.globalId = globalId;
         this.hostName = hostName;
@@ -19,11 +19,11 @@ public class NetworkSource {
         this.indirectId = indirectId;
     }
 
-    public NetworkSourceType getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(NetworkSourceType type) {
+    public void setType(String type) {
         this.type = type;
     }
 

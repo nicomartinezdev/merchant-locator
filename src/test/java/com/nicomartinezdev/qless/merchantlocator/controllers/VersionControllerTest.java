@@ -1,10 +1,8 @@
-package com.nicomartinezdev.qless.merchantlocator;
+package com.nicomartinezdev.qless.merchantlocator.controllers;
 
 /**
  * Created by nicolasmartinez on 2/19/18.
  */
-
-import com.nicomartinezdev.qless.merchantlocator.controllers.VersionController;
 
 import org.junit.Before;
 import org.junit.Test;

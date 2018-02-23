@@ -1,11 +1,20 @@
 package com.nicomartinezdev.qless.merchantlocator.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  * Created by nicolasmartinez on 2/19/18.
  */
+
+@Document(collection = "locations")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Location {
 
     private NetworkSource source;
+    @Indexed
     private String name;
     private String description;
     private Merchant merchantInfo;

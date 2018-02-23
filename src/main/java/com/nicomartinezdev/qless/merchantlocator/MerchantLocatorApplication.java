@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 public class MerchantLocatorApplication {
 
     public static void main(String[] args) {
-        Object[] sources = {ApplicationConfig.class, SecurityConfig.class};
-        SpringApplication.run(sources, args);
+        SpringApplication.run(ApplicationConfig.class, args);
     }
 }
